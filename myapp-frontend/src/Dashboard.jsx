@@ -8,6 +8,8 @@ const API_FILES = "/api/files";
 export default function Dashboard() {
   const [files, setFiles] = useState([]);
   const [selectedFile, setSelectedFile] = useState(null);
+  const [previewFile, setPreviewFile] = useState(null);
+  const [previewSrc, setPreviewSrc] = useState(null);
 
   const displayName = localStorage.getItem("displayName") || "user";
   const token = localStorage.getItem("token");
@@ -71,73 +73,153 @@ export default function Dashboard() {
     window.URL.revokeObjectURL(url);
   }
 
+  async function openPreview(file) {
+    if (!token) return;
+
+    try {
+      if (previewSrc) {
+        URL.revokeObjectURL(previewSrc);
+        setPreviewSrc(null);
+      }
+
+      const res = await fetch(`${API_FILES}/${file.id}/preview`, {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!res.ok) {
+        console.error("Preview error", res.statusText);
+        return;
+      }
+
+      const blob = await res.blob();
+      const objectUrl = URL.createObjectURL(blob);
+      setPreviewFile(file);
+      setPreviewSrc(objectUrl);
+    } catch (err) {
+      console.error("Preview fetch error", err);
+    }
+  }
+
+  function closePreview() {
+    if (previewSrc) {
+      URL.revokeObjectURL(previewSrc);
+    }
+    setPreviewSrc(null);
+    setPreviewFile(null);
+  }
+
   return (
-    <div className="dash-page">
-      <div className="dash-card">
-        <header className="dash-header">
-          <h1 className="dash-title">Welcome, {displayName}</h1>
-          <p className="dash-subtitle">
-            Upload new files and see your existing files.
-          </p>
-        </header>
+    <>
+      <div className="dash-page">
+        <div className="dash-card">
+          <header className="dash-header">
+            <h1 className="dash-title">Welcome, {displayName}</h1>
+            <p className="dash-subtitle">
+              Upload new files and see your existing files.
+            </p>
+          </header>
 
-        <div className="dash-layout">
-          <section className="dash-left">
-            <div className="dash-panel">
-              <h2 className="dash-section-title">Upload file</h2>
-              <div className="dash-upload">
-                <label className="dash-upload-label">
-                  <span>Choose file</span>
-                  <input type="file" onChange={handleFileChange} />
-                </label>
-                <button
-                  onClick={handleUpload}
-                  disabled={!selectedFile}
-                  className={`dash-button ${
-                    !selectedFile ? "dash-button-disabled" : ""
-                  }`}
-                >
-                  Upload
-                </button>
+          <div className="dash-layout">
+            <section className="dash-left">
+              <div className="dash-panel">
+                <h2 className="dash-section-title">Upload file</h2>
+                <div className="dash-upload">
+                  <label className="dash-upload-label">
+                    <span>Choose file</span>
+                    <input type="file" onChange={handleFileChange} />
+                  </label>
+                  <button
+                    onClick={handleUpload}
+                    disabled={!selectedFile}
+                    className={`dash-button ${
+                      !selectedFile ? "dash-button-disabled" : ""
+                    }`}
+                  >
+                    Upload
+                  </button>
+                </div>
+
+                {selectedFile && (
+                  <p className="dash-selected">Selected: {selectedFile.name}</p>
+                )}
+
+                <p className="dash-hint">
+                  Supported: PDFs, images and documents. Max 10 MB per file.
+                </p>
               </div>
+            </section>
 
-              {selectedFile && (
-                <p className="dash-selected">Selected: {selectedFile.name}</p>
-              )}
+            <section className="dash-right">
+              <div className="dash-panel">
+                <h2 className="dash-section-title">Your files</h2>
+                {files.length === 0 ? (
+                  <p className="dash-empty">No files uploaded yet.</p>
+                ) : (
+                  <ul className="dash-file-list">
+                    {files.map((f) => (
+                      <li key={f.id} className="dash-file-item">
+                        <span className="dash-file-name">{f.fileName}</span>
+                        <span className="dash-file-date">
+                          {new Date(f.uploadedAt).toLocaleString()}
+                        </span>
 
-              <p className="dash-hint">
-                Supported: PDFs, images and documents. Max 10 MB per file.
-              </p>
-            </div>
-          </section>
+                        <button
+                          className="dash-download-button"
+                          onClick={() => openPreview(f)}
+                        >
+                          Preview
+                        </button>
 
-          <section className="dash-right">
-            <div className="dash-panel">
-              <h2 className="dash-section-title">Your files</h2>
-              {files.length === 0 ? (
-                <p className="dash-empty">No files uploaded yet.</p>
-              ) : (
-                <ul className="dash-file-list">
-                  {files.map((f) => (
-                    <li key={f.id} className="dash-file-item">
-                      <span className="dash-file-name">{f.fileName}</span>
-                      <span className="dash-file-date">
-                        {new Date(f.uploadedAt).toLocaleString()}
-                      </span>
-                      <button
-                        className="dash-download-button"
-                        onClick={() => handleDownload(f.id, f.fileName)}
-                      >
-                        Download
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          </section>
+                        <button
+                          className="dash-download-button"
+                          onClick={() => handleDownload(f.id, f.fileName)}
+                        >
+                          Download
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </section>
+          </div>
         </div>
       </div>
-    </div>
+
+      {previewFile && previewSrc && (
+        <div className="preview-backdrop" onClick={closePreview}>
+          <div className="preview-modal" onClick={(e) => e.stopPropagation()}>
+            <h3>{previewFile.fileName}</h3>
+
+            {previewFile.fileName.match(/\.(jpg|jpeg|png|gif)$/i) ? (
+              <img
+                src={previewSrc}
+                alt={previewFile.fileName}
+                style={{ maxWidth: "100%", maxHeight: "70vh" }}
+              />
+            ) : previewFile.fileName.match(/\.pdf$/i) ? (
+              <iframe
+                src={previewSrc}
+                title={previewFile.fileName}
+                style={{ width: "100%", height: "70vh", border: "none" }}
+              />
+            ) : (
+              <p>No inline preview for this type. Use Download.</p>
+            )}
+
+            <button
+              className="dash-download-button"
+              onClick={closePreview}
+              style={{ marginTop: "8px" }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }

@@ -160,3 +160,4 @@ D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\bin\Debug\net8.0\publish\publish\publis
 D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\bin\Debug\net8.0\publish\publish\publish\MyApp.deps.json
 D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\bin\Debug\net8.0\publish\publish\publish\MyApp.runtimeconfig.json
 D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\bin\Debug\net8.0\publish\publish\publish\MyApp.staticwebassets.endpoints.json
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\obj\Debug\net8.0\MyApp.sourcelink.json

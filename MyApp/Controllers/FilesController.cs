@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyApp.Data;
 using System.Security.Claims;
+using Microsoft.Net.Http.Headers;
+using System.Net.Mime;
 
 namespace MyApp.Controllers;
 
@@ -97,4 +99,38 @@ public class FilesController : ControllerBase
 
         return File(bytes, contentType, fileRecord.FileName);
     }
+
+    [HttpGet("{id}/preview")]
+    public async Task<IActionResult> Preview(int id)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (userId == null) return Unauthorized();
+
+        var fileRecord = await _context.Files.FirstOrDefaultAsync(f => f.Id == id);
+        if (fileRecord == null) return NotFound();
+        if (fileRecord.UserId != userId) return Forbid();
+
+        var uploadsRoot = Path.Combine(_env.ContentRootPath, "UserFiles");
+        var fullPath = Path.Combine(uploadsRoot, fileRecord.StoragePath);
+        if (!System.IO.File.Exists(fullPath)) return NotFound();
+
+        var ext = Path.GetExtension(fileRecord.FileName).ToLowerInvariant();
+        var contentType = ext switch
+        {
+            ".jpg" or ".jpeg" => "image/jpeg",
+            ".png" => "image/png",
+            ".gif" => "image/gif",
+            ".pdf" => "application/pdf",
+            _ => "application/octet-stream"
+        };
+
+        var bytes = await System.IO.File.ReadAllBytesAsync(fullPath);
+
+        Response.Headers[HeaderNames.ContentDisposition] =
+            $"inline; filename=\"{fileRecord.FileName}\"";
+        Response.Headers["X-Content-Type-Options"] = "nosniff";
+
+        return File(bytes, contentType);
+    }
+
 }

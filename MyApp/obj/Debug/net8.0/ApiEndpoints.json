@@ -95,6 +95,22 @@
   },
   {
     "ContainingType": "MyApp.Controllers.FilesController",
+    "Method": "Preview",
+    "RelativePath": "api/Files/{id}/preview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MyApp.Controllers.FilesController",
     "Method": "Ping",
     "RelativePath": "api/Files/ping",
     "HttpMethod": "POST",
