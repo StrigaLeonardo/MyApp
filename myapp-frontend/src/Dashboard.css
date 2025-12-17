@@ -1,0 +1,244 @@
+.dash-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 16px;
+  background: #f3f4f6;
+  box-sizing: border-box;
+  min-width: 1200px;
+}
+
+.dash-card {
+  width: 100%;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 20px 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.dash-header {
+  margin-bottom: 20px;
+}
+
+.dash-title {
+  margin: 0;
+  font-size: 1.8rem;
+  color: black;
+}
+
+.dash-subtitle {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: black;
+}
+
+/* Layout: mobile = 1 kolona, desktop = 2 kolone */
+
+.dash-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dash-left,
+.dash-right {
+  width: 100%;
+}
+
+.dash-panel {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 16px 14px;
+  box-sizing: border-box;
+}
+
+/* Desktop / tablet */
+
+@media (min-width: 768px) {
+  .dash-layout {
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .dash-left {
+    flex: 0 0 320px;
+  }
+
+  .dash-right {
+    flex: 1;
+  }
+
+  .dash-panel {
+    padding: 18px 18px;
+  }
+
+  .dash-title {
+    font-size: 2rem;
+  }
+}
+
+/* Upload dio */
+
+.dash-section-title {
+  font-size: 1.1rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.dash-upload {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.dash-upload-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background: #f9fafb;
+  color: #333;
+}
+
+/* sakrij pravi input */
+.dash-upload-label input[type="file"] {
+  display: none;
+  color: #333;
+}
+
+.dash-button {
+  padding: 8px 18px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+  color: white;
+}
+
+.dash-button:hover:not(.dash-button-disabled) {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.dash-button-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.dash-selected {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.dash-hint {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* Files lista */
+
+.dash-files {
+  margin-top: 16px;
+}
+
+.dash-empty {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.dash-file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dash-file-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 0.9rem;
+  border: 1px solid #e5e7eb;
+}
+
+.dash-file-name {
+  max-width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: black;
+}
+
+.dash-file-date {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+@media (min-width: 1024px) {
+  .dash-card {
+    max-width: 1200px;
+    padding: 24px 24px 28px;
+  }
+
+  .dash-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Files + download */
+
+.dash-file-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 0.9rem;
+  border: 1px solid #e5e7eb;
+}
+
+@media (max-width: 600px) {
+  .dash-file-item {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+}
+
+.dash-download-button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #10b981;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.dash-download-button:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}

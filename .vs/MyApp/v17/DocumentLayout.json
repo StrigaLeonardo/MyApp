@@ -1,0 +1,176 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\data\\filerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\data\\filerecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\controllers\\userdatacontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\controllers\\userdatacontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\data\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|d:\\faks\\predmeti\\zavrsni rad\\myapp\\myapp\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED7B83BB-7941-4018-BDC0-300F621C0B89}|MyApp\\MyApp.csproj|solutionrelative:myapp\\dtos\\authdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 183,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Program.cs",
+              "RelativeDocumentMoniker": "MyApp\\Program.cs",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Program.cs",
+              "RelativeToolTip": "MyApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-15T20:44:54.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\appsettings.json",
+              "RelativeDocumentMoniker": "MyApp\\appsettings.json",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\appsettings.json",
+              "RelativeToolTip": "MyApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-12-16T12:31:58.955Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 202,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FilesController.cs",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Controllers\\FilesController.cs",
+              "RelativeDocumentMoniker": "MyApp\\Controllers\\FilesController.cs",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Controllers\\FilesController.cs",
+              "RelativeToolTip": "MyApp\\Controllers\\FilesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T18:47:54.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "MyApp\\Data\\AppDbContext.cs",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "MyApp\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T18:46:46.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FileRecord.cs",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Data\\FileRecord.cs",
+              "RelativeDocumentMoniker": "MyApp\\Data\\FileRecord.cs",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Data\\FileRecord.cs",
+              "RelativeToolTip": "MyApp\\Data\\FileRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T18:46:38.48Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "MyApp\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "MyApp\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T18:18:58.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDataControler.cs",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Controllers\\UserDataControler.cs",
+              "RelativeDocumentMoniker": "MyApp\\Controllers\\UserDataControler.cs",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Controllers\\UserDataControler.cs",
+              "RelativeToolTip": "MyApp\\Controllers\\UserDataControler.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T18:18:25.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserData.cs",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Data\\UserData.cs",
+              "RelativeDocumentMoniker": "MyApp\\Data\\UserData.cs",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Data\\UserData.cs",
+              "RelativeToolTip": "MyApp\\Data\\UserData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T17:50:37.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthDtos.cs",
+              "DocumentMoniker": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Dtos\\AuthDtos.cs",
+              "RelativeDocumentMoniker": "MyApp\\Dtos\\AuthDtos.cs",
+              "ToolTip": "D:\\Faks\\Predmeti\\Zavrsni rad\\MyApp\\MyApp\\Dtos\\AuthDtos.cs",
+              "RelativeToolTip": "MyApp\\Dtos\\AuthDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T12:33:31.958Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

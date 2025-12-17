@@ -1,0 +1,11 @@
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\MyApp
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\appsettings.Development.json
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\appsettings.json
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\MyApp.dll
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\MyApp.deps.json
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\MyApp.runtimeconfig.json
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\MyApp.pdb
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\Microsoft.OpenApi.dll
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\Swashbuckle.AspNetCore.Swagger.dll
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Faks\Predmeti\Zavrsni rad\MyApp\MyApp\publish\Swashbuckle.AspNetCore.SwaggerUI.dll
