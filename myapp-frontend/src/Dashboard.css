@@ -37,8 +37,6 @@
   color: black;
 }
 
-/* Layout: mobile = 1 kolona, desktop = 2 kolone */
-
 .dash-layout {
   display: flex;
   flex-direction: column;
@@ -56,8 +54,6 @@
   padding: 16px 14px;
   box-sizing: border-box;
 }
-
-/* Desktop / tablet */
 
 @media (min-width: 768px) {
   .dash-layout {
@@ -83,8 +79,6 @@
   }
 }
 
-/* Upload dio */
-
 .dash-section-title {
   font-size: 1.1rem;
   margin: 0 0 10px;
@@ -97,6 +91,7 @@
   gap: 12px;
   margin-bottom: 8px;
   color: #333;
+  gap: 1em;
 }
 
 .dash-upload-label {
@@ -109,9 +104,9 @@
   font-size: 0.9rem;
   background: #f9fafb;
   color: #333;
+  min-width: 150px;
 }
 
-/* sakrij pravi input */
 .dash-upload-label input[type="file"] {
   display: none;
   color: #333;
